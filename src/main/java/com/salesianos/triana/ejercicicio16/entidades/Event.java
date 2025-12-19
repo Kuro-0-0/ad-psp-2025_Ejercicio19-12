@@ -3,6 +3,7 @@ package com.salesianos.triana.ejercicicio16.entidades;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,6 +21,11 @@ public class Event {
 
     private String title;
     private String description;
+
+    private LocalDateTime startAt;
+    private LocalDateTime endAt;
+
+    private EventStatus status;
 
     @ManyToOne
     @JoinColumn(name = "organizer_id")
